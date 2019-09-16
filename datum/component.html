@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;component - &#x2F;tg&#x2F; Station 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">&#x2F;tg&#x2F; Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="datum/component.html#proc">Proc Details</a></header>
+<main>
+<h1>Component <aside>/<a href="datum.html">datum</a>/<a href="datum/component.html">component</a></aside>
+        
+    
+            <a href="https://github.com/tgstation/tgstation/blob/d590d0322fba25398e0836274ef6c0c712a33752/code/datums/components/_component.dm#L11">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;components&#x2F;_component.dm 11"/></a></h1>
+
+<p>The component datum</p>
+<p>a component should be a single standalone unit
+of functionality, that works by receiving signals from it's parent
+object to provide some single functionality (i.e a slippery component)
+that makes the object it's attached to cause people to slip over</p><table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="datum/component.html#proc/New">New</a></th><td>Create a new component</td></tr>
+            <tr><th><a href="datum/component.html#proc/PostTransfer">PostTransfer</a></th><td>Callback Just after a component is transferred</td></tr>
+            <tr><th><a href="datum/component.html#proc/PreTransfer">PreTransfer</a></th><td>Callback Just before this component is transferred</td></tr>
+            <tr><th><a href="datum/component.html#proc/RegisterWithParent">RegisterWithParent</a></th><td>Register the components signals with the parent object</td></tr>
+            <tr><th><a href="datum/component.html#proc/RemoveComponent">RemoveComponent</a></th><td>Remove this component from it's parent</td></tr>
+            <tr><th><a href="datum/component.html#proc/UnregisterFromParent">UnregisterFromParent</a></th><td>Unregister signals from our parent object</td></tr>
+            <tr><th><a href="datum/component.html#proc/ui_host">ui_host</a></th><td>Return the object that is the host of any UI's that this component has</td></tr></table><h2><a name="proc">Proc Details</a></h2><h3><a name="proc/New">New</a><aside>(/<a href="datum.html">datum</a>/P, ...) 
+        
+    
+            <a href="https://github.com/tgstation/tgstation/blob/d590d0322fba25398e0836274ef6c0c712a33752/code/datums/components/_component.dm#L25">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;components&#x2F;_component.dm 25"/></a></aside>
+        </h3>
+        <p>Create a new component</p>
+<p>Arguments:</p>
+<ul>
+<li>datum/P the parent datum this component reacts to signals from</li>
+</ul><h3><aside class="declaration">proc </aside><a name="proc/PostTransfer">PostTransfer</a><aside>() 
+        
+    
+            <a href="https://github.com/tgstation/tgstation/blob/d590d0322fba25398e0836274ef6c0c712a33752/code/datums/components/_component.dm#L217">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;components&#x2F;_component.dm 217"/></a></aside>
+        </h3>
+        <p>Callback Just after a component is transferred</p>
+<p>Use this to do any special setup you need to do after being moved to a new object</p><h3><aside class="declaration">proc </aside><a name="proc/PreTransfer">PreTransfer</a><aside>() 
+        
+    
+            <a href="https://github.com/tgstation/tgstation/blob/d590d0322fba25398e0836274ef6c0c712a33752/code/datums/components/_component.dm#L209">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;components&#x2F;_component.dm 209"/></a></aside>
+        </h3>
+        <p>Callback Just before this component is transferred</p>
+<p>Use this to do any special cleanup you might need to do before being deregged from an object</p><h3><aside class="declaration">proc </aside><a name="proc/RegisterWithParent">RegisterWithParent</a><aside>() 
+        
+    
+            <a href="https://github.com/tgstation/tgstation/blob/d590d0322fba25398e0836274ef6c0c712a33752/code/datums/components/_component.dm#L77">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;components&#x2F;_component.dm 77"/></a></aside>
+        </h3>
+        <p>Register the components signals with the parent object</p>
+<p>Use this proc to register signals with your parent object
+this is called when an object is created, or is transferred
+between objects</p><h3><aside class="declaration">proc </aside><a name="proc/RemoveComponent">RemoveComponent</a><aside>() 
+        
+    
+            <a href="https://github.com/tgstation/tgstation/blob/d590d0322fba25398e0836274ef6c0c712a33752/code/datums/components/_component.dm#L357">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;components&#x2F;_component.dm 357"/></a></aside>
+        </h3>
+        <p>Remove this component from it's parent</p><h3><aside class="declaration">proc </aside><a name="proc/UnregisterFromParent">UnregisterFromParent</a><aside>() 
+        
+    
+            <a href="https://github.com/tgstation/tgstation/blob/d590d0322fba25398e0836274ef6c0c712a33752/code/datums/components/_component.dm#L117">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;components&#x2F;_component.dm 117"/></a></aside>
+        </h3>
+        <p>Unregister signals from our parent object</p>
+<p>Use this proc to unregister for signals from your parent object
+this is called when an object is destroyed, or is transferred
+between objects</p><h3><a name="proc/ui_host">ui_host</a><aside>() 
+        
+    
+            <a href="https://github.com/tgstation/tgstation/blob/d590d0322fba25398e0836274ef6c0c712a33752/code/datums/components/_component.dm#L411">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;components&#x2F;_component.dm 411"/></a></aside>
+        </h3>
+        <p>Return the object that is the host of any UI's that this component has</p></main>
+<footer>
+    tgstation.dme
+    <a href="https://github.com/tgstation/tgstation/tree/d590d0322fba25398e0836274ef6c0c712a33752">d590d03</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.0.0</a></footer>
+</body>
+</html>
