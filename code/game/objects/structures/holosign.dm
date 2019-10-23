@@ -61,6 +61,8 @@
 		return 1
 	if(mover.pass_flags & (PASSGLASS|PASSTABLE|PASSGRILLE))
 		return 1
+	if(issilicon(mover))
+		return 1
 	if(iscarbon(mover))
 		var/mob/living/carbon/C = mover
 		if(allow_walk && C.m_intent == MOVE_INTENT_WALK)
